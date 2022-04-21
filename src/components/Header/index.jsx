@@ -1,12 +1,10 @@
 import React from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from "react-router-dom";
+
 const Header = () => {
-  
-  // const logout = () => {
-  //   setToken('');
-  //   window.localStorage.removeItem('token');
-  // };
+  const [isOpen, setOpen] = useState(false);
   return (
     <>
     <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -16,14 +14,20 @@ const Header = () => {
           mediaPlay!
         </a>
     
-        <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
+        <a
+            role="button"
+            className={`navbar-burger burger ${isOpen && "is-active"}`}
+            aria-label="menu"
+            aria-expanded="false"
+            onClick={() => setOpen(!isOpen)}
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
       </div>
     
-      <div className="navbar-menu">
+      <div className={`navbar-menu ${isOpen && "is-active"}`}>
         <div className="navbar-start">
           <NavLink
             className="navbar-item"
