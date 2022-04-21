@@ -1,14 +1,6 @@
-* {
-  margin: 0 auto;
-}
-
 .cont-login {
   display: flex;
   justify-content: space-around;
-  height: 100vh;
-}
-
-.cont-landing {
   height: 100vh;
 }
 
@@ -26,66 +18,13 @@
   flex-direction: column;
 }
 
-.header {
-  background-color: rgb(204, 106, 233);
-  display: inline-flex;
-  width: 100%;
-  padding: 10px 0;
-  margin-bottom: 15px;
-}
-
-.header-logo {
-  font-size: 1.5rem;
-  padding: 10px;
-  margin-left: 0;
-}
-
-.header-menu {
-  margin-right: 0;
-}
-
-.header-menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.header-menu ul li {
-  float: left;
-  margin-right: 5px;
-  padding-top: 15px;
-}
-.header-menu ul li a{
-  text-decoration: none;
-  padding: 15px;
-  background-color: aliceblue;
-}
-
-.header-menu ul li a:hover {
-  background-color: red;
+.search-bar {
+  display: inline-flex
 }
 
 .songs-container {
   display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
-	grid-gap: 0.5em;
-  margin: 0;
+	grid-gap: 1em;
+  margin-bottom: 30px;
 }
-
-/* Responsive */
-/* @media screen and (min-width: 769px) {
-  body {
-    background-color: pink;
-  }
-}
-
-@media screen and (max-width:  768px) {
-  body {
-    background-color: blue;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  body {
-    background-color: olive;
-  }
-} */
