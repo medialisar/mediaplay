@@ -16,7 +16,7 @@ const Songs = () => {
         <div className="card-content">
           <p className="title is-4">Title</p>
           <p className="subtitle is-6">Artis</p>
-          <p className="subtitle is-6">Album</p>
+          <p className="subtitle is-6">Durasi</p>
         </div>
         <footer className="card-footer">
           <a href="#" className="card-footer-item">Play</a>

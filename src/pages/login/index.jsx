@@ -1,5 +1,6 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
+import { useHistory } from 'react-router-dom';
 
 function Login() {
   const CLIENT_ID = 'ee416f8946944eac93de1274207f1dad';
@@ -8,6 +9,7 @@ function Login() {
   const RESPONSE_TYPE = 'token';
   const SCOPE = 'playlist-modify-private';
 
+  let history = useHistory();
   const [token, setToken] = useState('');
 
   useEffect(() => {
@@ -27,7 +29,11 @@ function Login() {
 
     setToken(token);
     console.log("ini ",token);
-  }, []);
+    if(token) {
+      console.log("ini ",token);
+      history.push("home");
+    }
+  }, [history]);
 
   
   return (
