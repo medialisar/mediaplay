@@ -19,7 +19,9 @@
 }
 
 .search-bar {
-  display: inline-flex
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .songs-container {

@@ -1,4 +1,4 @@
-// import SearchBar from "../../components/SearchBar";
+import SearchBar from "../../components/SearchBar";
 // import SongCard from "../../components/SongCard";
 // import spotifyApi from "../../services/spotify.api";
 // import { useEffect } from "react";
@@ -45,7 +45,10 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <SearchBar />
+      {/* <SongCard /> */}
+    </>
   )
 }
 

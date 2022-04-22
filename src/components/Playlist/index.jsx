@@ -28,7 +28,7 @@ const Playlist = () => {
 
   return (
     <>
-      <h1>Trending</h1>
+      <h2 className="title is-2">Trending</h2>
       <div className="songs-container">
         <div className="card">
           <div className="card-image">
