@@ -52,7 +52,7 @@ const Header = () => {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-light" onClick={ logout }>
+              <a className="button is-light" onClick={ logout } href="/">
                 Log out
               </a>
             </div>
