@@ -1,3 +1,4 @@
+import React from 'react';
 import HeaderComponent from "../../components/Header";
 import HomePage from "../home";
 import PlaylistComponent from "../../components/Playlist";
