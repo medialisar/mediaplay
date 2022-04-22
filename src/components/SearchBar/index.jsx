@@ -1,27 +1,27 @@
-const SearchBar = ( seacrhValue, searchSubmit ) => {
+const SearchBar = ({onChange, onSubmit}) => {
   return (
     <>
-    <form  onSubmit={searchSubmit}>
-      <div className="search-bar block">
-        <div className="field has-addons">
-          <div className="control">
-            <input 
-              className="input" 
-              type="text" 
-              placeholder="Find a song..." 
-              onChange={ seacrhValue }
-            />
-          </div>
-          <div className="control">
-            <a className="button is-link">
-              Search
-            </a>
+      <form onSubmit={onSubmit}>
+        <div className="search-bar block">
+          <div className="field has-addons">
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                placeholder="Find a song..."
+                onChange={onChange}
+              />
+            </div>
+            <div className="control">
+              <button type="submit" className="button is-link">
+                Search
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
     </>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;

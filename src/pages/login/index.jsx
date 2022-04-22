@@ -40,8 +40,8 @@ function Login() {
           
         </div>
         <div className="right-side">
-          <h1>Welcome to</h1>
-          <h2>mediaPlay!</h2>
+          <h1 className='title is-3'>Welcome to</h1>
+          <h2 className='subtitle is-3'>mediaPlay!</h2>
           <br/>
           <a  className="button is-link is-light"
             href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`}>
