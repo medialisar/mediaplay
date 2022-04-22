@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchBar from '../../components/SearchBar';
 import SongCard from '../../components/SongCard';
 import spotifyApi from '../../services/spotify.api';
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addSongs } from '../../features/song/songsSlice';
 
@@ -15,13 +14,8 @@ const Home = () => {
   const fetchNewRealease = async (searchValue = '') => {
     const token = window.localStorage.getItem('token');
     const Authorization = `Bearer ${token}`;
-
     const url = `https://api.spotify.com/v1/search?limit=50&q=track:${searchValue}&type=track`;
-
-    console.log({ url });
-    console.log({ searchValue });
-
-    const response = await spotifyApi
+      const response = await spotifyApi
       .get(url, {
         headers: {
           Accept: 'application/json',
@@ -58,6 +52,7 @@ const Home = () => {
             artist={ song.artists
               .reduce((prev, current) => prev + current.name + ', ', '')
               .slice(0, -2) }
+            duration={ song.duration_ms }
           />
         );
       });

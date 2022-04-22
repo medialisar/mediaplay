@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   songs: []
@@ -14,6 +14,6 @@ const songsSlice = createSlice({
   }
 });
 
-const {actions, reducer} = songsSlice;
-export const {addSongs} = actions;
+const { actions, reducer } = songsSlice;
+export const { addSongs } = actions;
 export default reducer;

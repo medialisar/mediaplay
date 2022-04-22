@@ -1,17 +1,17 @@
 import React from 'react';
 
-const SongCard = ({images, title = '', artist}) => {
+const SongCard = ({images, title = '', artist, duration}) => {
   return (
     <>
       <div className="card">
         <div className="card-image">
           <figure className="image is-4by3">
-            <img src={images} alt="song image" />
+            <img src={ images } alt="song image" />
           </figure>
         </div>
         <div className="card-content">
-          <p className="title is-4">{title}</p>
-          <p className="subtitle is-6">{artist} | Durasi</p>
+          <p className="title is-4">{ title }</p>
+          <p className="subtitle is-6">{ artist } | { duration*0.001/60 } minutes</p>
         </div>
         <footer className="card-footer">
           <a href="#" className="card-footer-item">
