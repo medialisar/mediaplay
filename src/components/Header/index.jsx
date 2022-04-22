@@ -1,16 +1,20 @@
-import React from 'react';
+// import React from 'react';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
+
+  const logout = () => {
+    window.localStorage.removeItem('token');
+  };
+
   return (
     <>
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar header-navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
-          {/* <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" /> */}
+        <a className="navbar-item project-title" href="#">
           mediaPlay!
         </a>
     
@@ -48,7 +52,7 @@ const Header = () => {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-light">
+              <a className="button is-light" onClick={ logout }>
                 Log out
               </a>
             </div>

@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LoginPage from "./pages/login";
 import LandingPage from "./pages/landing";
+import PageNotFound from "./pages/pageNotFound";
 
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
         </Route>
         <Route path="/home">
           <LandingPage />
+        </Route>
+        <Route>
+          <PageNotFound />
         </Route>
       </Switch>
       </Router>

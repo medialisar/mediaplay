@@ -1,9 +1,8 @@
-import React from 'react';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 function Login() {
-  const CLIENT_ID = 'ee416f8946944eac93de1274207f1dad';
+  const CLIENT_ID = 'd91a83304e1c49a9b32e0184705ecb66';
   const REDIRECT_URI = 'http://localhost:3000';
   const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
   const RESPONSE_TYPE = 'token';
@@ -28,9 +27,7 @@ function Login() {
     }
 
     setToken(token);
-    console.log("ini ",token);
     if(token) {
-      console.log("ini ",token);
       history.push("home");
     }
   }, [history]);

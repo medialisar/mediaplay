@@ -1,18 +1,17 @@
-import React from 'react';
 import HeaderComponent from "../../components/Header";
-import SongComponent from "../../components/Song";
+import HomePage from "../home";
 import PlaylistComponent from "../../components/Playlist";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-function Login() {
+function Landing() {
   return (
     <>
-      <div className="container">
+      <div className="container block">
         <Router>
           <HeaderComponent />
           <Switch>
             <Route exact path="/home">
-              <SongComponent />
+              <HomePage />
             </Route>
             <Route path="/playlist">
               <PlaylistComponent />
@@ -24,4 +23,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Landing;

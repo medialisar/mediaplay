@@ -28,3 +28,11 @@
 	grid-gap: 1em;
   margin-bottom: 30px;
 }
+
+.project-title {
+  font-weight: 900;
+}
+
+.header-navbar {
+  margin-bottom: 20px;
+}
