@@ -5,13 +5,7 @@ This project named "mediaplay", a place for you to play your sound media.
 This project can help you to see what ever related to music on spotify. You can search songs by the name, the artist or event the album.
 I add another function:
 - you can logout
-- you can see your playlists
-
-# Badge
-
-
-# Visual
-
+- you can see your own playlist
 
 # Support
 If you need a help, you can hit me up at medialisar99@gmail.com
