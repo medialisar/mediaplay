@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 function Login() {
-  const CLIENT_ID = 'd91a83304e1c49a9b32e0184705ecb66';
-  const REDIRECT_URI = 'http://localhost:3000';
+  const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+  const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URL;
   const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
   const RESPONSE_TYPE = 'token';
   const SCOPE = 'playlist-modify-private';
